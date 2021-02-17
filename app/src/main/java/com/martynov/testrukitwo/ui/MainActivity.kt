@@ -1,7 +1,6 @@
 package com.martynov.testrukitwo.ui
 
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.martynov.testrukitwo.R
@@ -32,7 +31,6 @@ class MainActivity : AppCompatActivity() {
 
 
             if (items.size > 2 && items.get(items.size -1).state == State.LIVE  && items.get(items.size -2).state == State.LIVE  && items.get(items.size -3).state == State.LIVE) {
-                Log.d("My", "Зашел")
                   items.add(Cell(State.LIFE))
             }
             if(items.size > 3 && items.get(items.size -1).state == State.DEAD  && items.get(items.size -2).state == State.DEAD  && items.get(items.size -3).state == State.DEAD){
