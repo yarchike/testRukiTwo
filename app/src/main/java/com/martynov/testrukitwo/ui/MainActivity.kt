@@ -17,9 +17,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        items.add(Cell(State.LIFE))
-        items.add(Cell(State.DEAD))
-        items.add(Cell(State.DEAD))
 
         with(binding.container) {
             layoutManager = LinearLayoutManager(this@MainActivity)
@@ -28,7 +25,6 @@ class MainActivity : AppCompatActivity() {
 
         binding.buttonCreate.setOnClickListener {
          val cell = deadAndLive()
-
 
             if (items.size > 2 && items.get(items.size -1).state == State.LIVE  && items.get(items.size -2).state == State.LIVE  && items.get(items.size -3).state == State.LIVE) {
                   items.add(Cell(State.LIFE))
